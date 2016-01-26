@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Snowboard Quiz</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container">
+  <header>
+    <!--Navigation links-->
+    <nav>
+      <ul class="nav nav-pills">
+        <li class="active text-uppercase"><a href="index.html"><b>home</b></a></li>
+        <li class="text-uppercase"><a href="help.html"><b>help</b></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main">
+
+    <div class="progress-row ui-progressbar-value">
+      <div id="progressbar">
+        <p id="progressLabel">0% Complete</p>
+      </div>
+    </div>
+
+    <form action="score.php" method="post" id="quiz">
+      <div class="slider">
+
+        <div id="1" class="slide active-slide">
+
+          <fieldset class="input-group" data-role="controlgroup">
+            <legend>1. Who originally designed the snowboard?</legend>
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" class="show" />
+                </span>
+                <label for="question-1-answers-A" type="text" class="form-control">A) Tony Hawk</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" class="show" />
+                </span>
+                <label for="question-1-answers-B" type="text" class="form-control">B) Sherman Poppen</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" class="show" />
+                </span>
+                <label for="question-1-answers-C" type="text" class="form-control">C) Shaun White</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" class="show" />
+                </span>
+                <label for="question-1-answers-D" type="text" class="form-control">D) Roope Tonteri </label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+          </fieldset>
+
+          <a class="btn btn-lg right nappi" type="button" id="next">NEXT</a>
+          <!--Next slide-->
+        </div>
+        <!--/slide 1-->
+
+        <div id="2" class="slide">
+          <!--  <div id="circle">
+          <p>2 / 5</p>
+        </div>-->
+          <fieldset data-role="controlgroup">
+            <legend>2. How snowboard size is usually measured?</legend>
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" class="show" />
+                </span>
+                <label for="question-2-answers-A" type="text" class="form-control">A) Inches</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" class="show" />
+                </span>
+                <label for="question-2-answers-B" type="text" class="form-control">B) Centimeters</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" class="show" />
+                </span>
+                <label for="question-2-answers-C" type="text" class="form-control">C) Feet</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-2-answers" id="question-2-answers-D" value="D" class="show" />
+                </span>
+                <label for="question-2-answers-D" type="text" class="form-control">D) Yards</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+          </fieldset>
+          <a class="btn btn-lg nappi right" type="button" id="next2">NEXT</a>
+        </div>
+        <!--/slide 2-->
+
+        <div id="3" class="slide">
+          <!--  <div id="circle">
+          <p>3 / 5</p>
+        </div>-->
+          <fieldset data-role="controlgroup">
+            <legend>3. When was the first National Snowboard race?</legend>
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" class="show" />
+                </span>
+                <label for="question-3-answers-A" type="text" class="form-control">A) 1990</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" class="show" />
+                </span>
+                <label for="question-3-answers-B" type="text" class="form-control">B) 1964</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" class="show" />
+                </span>
+                <label for="question-3-answers-C" type="text" class="form-control">C) 1979</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-3-answers" id="question-3-answers-D" value="D" class="show" />
+                </span>
+                <label for="question-3-answers-D" type="text" class="form-control">D) 1982</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+          </fieldset>
+          <a class="btn btn-lg nappi right" type="button" id="next3">NEXT</a>
+        </div>
+        <!--/slide 3-->
+
+        <div id="4" class="slide">
+          <!--  <div id="circle">
+          <p>4 / 5</p>
+        </div>-->
+          <fieldset data-role="controlgroup">
+            <legend>4. What is it called when a snowboarder changes from one stance to another while going down the hill?</legend>
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-4-answers" id="question-4-answers-A" value="A" class="show" />
+                </span>
+                <label for="question-4-answers-A" type="text" class="form-control">A) Switch</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-4-answers" id="question-4-answers-B" value="B" class="show" />
+                </span>
+                <label for="question-4-answers-B" type="text" class="form-control">B) Change</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-4-answers" id="question-4-answers-C" value="C" class="show" />
+                </span>
+                <label for="question-4-answers-C" type="text" class="form-control">C) Reverse</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-4-answers" id="question-4-answers-D" value="D" class="show" />
+                </span>
+                <label for="question-4-answers-D" type="text" class="form-control">D) Fake</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+          </fieldset>
+          <a class="btn btn-lg nappi right" type="button" id="next4">NEXT</a>
+        </div>
+        <!--/slide 4-->
+
+        <div id="5" class="slide">
+          <!--  <div id="circle">
+          <p>5 / 5</p>
+        </div>-->
+          <fieldset data-role="controlgroup">
+            <legend>5. How many Big Mac hamburgers Heikki Sorsa ate in Salt Lake City Winter Olympics in 2002?</legend>
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" class="show" />
+                </span>
+                <label for="question-5-answers-A" type="text" class="form-control">A) 58</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" class="show" />
+                </span>
+                <label for="question-5-answers-B" type="text" class="form-control">B) 17</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-5-answers" id="question-5-answers-C" value="C" class="show" />
+                </span>
+                <label for="question-5-answers-C" type="text" class="form-control">C) 44</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="radio" name="question-5-answers" id="question-5-answers-D" value="D" class="show" />
+                </span>
+                <label for="question-5-answers-D" type="text" class="form-control">D) 1</label>
+              </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /row -->
+          </fieldset>
+          <center>
+            <br>
+            <input type="submit" value="SUBMIT ANSWERS" class="btn btn-lg nappi" id="submit" />
+          </center>
+        </div>
+        <!--/slide 5-->
+      </div>
+    </form>
+  </div>
+
+
+  <!--End "slider"-->
+  <!--/main-->
+
+  <script src="js/slider.js"></script>
+  <!--jQuery-->
+
+
+
+</body>
+
+</html>
